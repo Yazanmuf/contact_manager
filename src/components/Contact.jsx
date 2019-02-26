@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Contact extends Component {
   state = {
@@ -9,6 +10,11 @@ class Contact extends Component {
     console.log(e);
     this.setState({ showContactInfo: !this.state.showContactInfo });
   };
+
+  onDeleteClick = () => {
+    this.props.deleteClickHandler();
+  };
+
   render() {
     const { contact } = this.props;
     const { showContactInfo } = this.state;
@@ -23,6 +29,7 @@ class Contact extends Component {
             style={{ cursor: 'pointer', margin: '6px' }}
           />
           <i
+            onClick={this.onDeleteClick}
             className="fas fa-times"
             style={{ cursor: 'pointer', float: 'right', color: 'red' }}
           />{' '}
@@ -37,5 +44,10 @@ class Contact extends Component {
     );
   }
 }
+
+Contact.propTypes = {
+  contact: PropTypes.object.isRequired,
+  deleteClickHandler: PropTypes.func.isRequired
+};
 
 export default Contact;

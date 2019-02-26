@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Contacts from './components/Contacts';
-import Header from './components/Header';
+import Header from './components/layout/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
