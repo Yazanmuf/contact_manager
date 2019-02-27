@@ -8,7 +8,6 @@ class Contact extends Component {
   };
   // Toggles on / off the button
   onShowClick = e => {
-    console.log(e);
     this.setState({ showContactInfo: !this.state.showContactInfo });
   };
 
