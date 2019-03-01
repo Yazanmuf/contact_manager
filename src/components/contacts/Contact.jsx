@@ -41,7 +41,7 @@ class Contact extends Component {
               {showContactInfo ? (
                 <ul className="list-group">
                   <li className="list-group-item">email: {contact.email}</li>
-                  <li className="list-group-item">number: {contact.number}</li>
+                  <li className="list-group-item">number: {contact.phone}</li>
                 </ul>
               ) : null}
             </div>
